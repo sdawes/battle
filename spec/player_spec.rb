@@ -18,15 +18,14 @@ end
 
 describe "#attack" do
   it 'attacks player' do
+    expect(player2).to receive(:receive_damage)
     player.attack(player2)
-    expect(player2).to respond_to(:receive_damage)
-
   end
 end
 
 describe "#receive_damage" do
   it 'reduces HP by Damage' do
-    expect { player.receive_damage }.to change{player.hit_points}.by(-10)
+    expect { player.receive_damage }.to change{ player.hit_points }.by(-10)
   end
 end
 
