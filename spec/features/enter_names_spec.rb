@@ -1,4 +1,3 @@
-require 'spec_helper'
 
 feature 'Enter names' do
     scenario 'submitting names' do
@@ -9,3 +8,4 @@ feature 'Enter names' do
       expect(page).to have_content 'Dave vs. Mittens'
     end
 end
+
