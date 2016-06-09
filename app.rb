@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative './lib/player.rb'
+require_relative 'lib/game.rb'
 
 class Battle < Sinatra::Base
 
@@ -21,7 +22,7 @@ class Battle < Sinatra::Base
   end
 
   post '/attacking' do
-    $player_1_name.attack($player_2_name)
+    Game.new.attack($player_2_name)
     redirect '/attack'
   end
 

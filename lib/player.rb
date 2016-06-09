@@ -11,9 +11,9 @@ class Player
     @hitpoints = DEFAULT_HITPOINTS
   end
 
-  def attack(other_player)
-    other_player.reduce_hitpoints
-  end
+  # def attack(other_player)
+  #   other_player.reduce_hitpoints
+  # end
 
   def reduce_hitpoints
     @hitpoints -= DEFAULT_DAMAGE
