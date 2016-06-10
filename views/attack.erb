@@ -1,5 +1,11 @@
-
+<% if @game.current_turn == @game.player1 %>
 <h1><%=@game.player1.name%> attacked <%=@game.player2.name%>!</h1>
+<% else %>
+<h1><%=@game.player2.name%> attacked <%=@game.player1.name%>!</h1>
+<% end %>
+
 <h2><%=@game.player2.name%> is injured, HP now <%=@game.player2.hit_points%></h2>
 
 <h2>Now it's <%=@game.current_turn.name%>'s turn </h2>
+
+<h3><a href="/attack">Attack</a></h3>
